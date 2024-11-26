@@ -29,6 +29,7 @@
             return id;
         }
     
+    
         public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
         this.category = category;
@@ -61,6 +62,7 @@
             this.cost = cost;
             this.id = ++nbDigitalVideoDiscs;
         }
+
         
     
 }
