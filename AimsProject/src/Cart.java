@@ -12,8 +12,7 @@ public class Cart {
       }
       System.out.println("The cart is almost full");
     }
-   
-
+  
     public void removeDigitalVideoDisc (DigitalVideoDisc disc) {
       for(int i  = 0; i < MAX_NUMBERS_ORDERED; i++) {
         if(itemsOdered[i] == disc) {

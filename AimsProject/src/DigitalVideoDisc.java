@@ -21,6 +21,7 @@
         return cost;
         }
     
+    
         public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
         this.category = category;
@@ -48,6 +49,7 @@
             this.length = length;
             this.cost = cost;
         }
+
     
         
     }
