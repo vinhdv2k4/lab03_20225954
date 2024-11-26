@@ -14,6 +14,7 @@ public class Cart {
       }
       System.out.println("The cart is almost full");
     }
+
     
   
     
@@ -35,6 +36,16 @@ public class Cart {
         itemsOdered[i] = null;
         System.out.println("The disc has been removed");
         break;
+=======
+  
+    public void removeDigitalVideoDisc (DigitalVideoDisc disc) {
+      for(int i  = 0; i < MAX_NUMBERS_ORDERED; i++) {
+        if(itemsOdered[i] == disc) {
+          itemsOdered[i] = null;
+          System.out.println("The disc has been removed");
+          break;
+        }
+
       }
     }
   }
@@ -57,6 +68,7 @@ public class Cart {
     for (int i = 0; i < qtyOrdered; i++) {
       System.out.println((i + 1) + ". " + itemsOdered[i].toString());
     }
+
     System.out.println("Total cost: " + totalCost());
     System.out.println("***************************************************");
   }
@@ -87,4 +99,19 @@ public void searchByTitle(String title) {
 }
 
   
+=======
+    public void printCart(){
+      System.out.println("***********************CART***********************");
+      System.out.println("Ordered Items: ");
+      for(int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
+        if(itemsOdered[i] != null ) {
+          System.out.println((i+1) +". "+itemsOdered[i].toString());
+    
+    }
+
+  }
+      System.out.println("Total cost : "+totalCost());
+      System.out.println("**************************************************");
+}
+
 }
