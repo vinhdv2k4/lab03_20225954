@@ -25,6 +25,19 @@ public class Cart {
  }
   
 
+
+
+    
+  
+    
+  public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList ) {
+    for(DigitalVideoDisc dvd : dvdList) {
+      this.addDigitalVideoDisc(dvd);
+    }
+ }
+  
+
+
   public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2){
     this.addDigitalVideoDisc(dvd1);
     this.addDigitalVideoDisc(dvd2);
@@ -36,7 +49,7 @@ public class Cart {
         itemsOdered[i] = null;
         System.out.println("The disc has been removed");
         break;
-=======
+
   
     public void removeDigitalVideoDisc (DigitalVideoDisc disc) {
       for(int i  = 0; i < MAX_NUMBERS_ORDERED; i++) {
@@ -45,6 +58,7 @@ public class Cart {
           System.out.println("The disc has been removed");
           break;
         }
+
 
       }
     }
@@ -59,6 +73,45 @@ public class Cart {
     }
     return totalCost;
   }
+
+
+  
+
+  public void printCart() {
+    System.out.println("***********************CART***********************");
+    System.out.println("Ordered Items:");
+    for (int i = 0; i < qtyOrdered; i++) {
+      System.out.println((i + 1) + ". " + itemsOdered[i].toString());
+    }
+    System.out.println("Total cost: " + totalCost());
+    System.out.println("***************************************************");
+  }
+  public void searchById(int id) {
+    
+    for (int i =0; i< qtyOrdered; i++) {
+        if (itemsOdered[i].getID() == id) {
+            System.out.println("Found DVD: " + itemsOdered[i].toString());
+            return;
+        }
+    }
+    System.out.println("No match found for ID: " + id);
+    }
+
+
+public void searchByTitle(String title) {
+    boolean found = false;
+    for (DigitalVideoDisc disc : itemsOdered) {
+        if (disc != null && disc.isMatch(title)) {
+            System.out.println("Found DVD: " + disc.toString());
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        System.out.println("No match found for title: " + title);
+    }
+}
+
 
   
 
@@ -99,7 +152,7 @@ public void searchByTitle(String title) {
 }
 
   
-=======
+
     public void printCart(){
       System.out.println("***********************CART***********************");
       System.out.println("Ordered Items: ");
@@ -113,5 +166,6 @@ public void searchByTitle(String title) {
       System.out.println("Total cost : "+totalCost());
       System.out.println("**************************************************");
 }
+
 
 }

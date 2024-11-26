@@ -71,7 +71,12 @@
     public boolean isMatch(String title) {
         return this.title != null && this.title.toLowerCase().contains(title.toLowerCase());
     }
-=======
+
+
+    public boolean isMatch(String title) {
+        return this.title != null && this.title.toLowerCase().contains(title.toLowerCase());
+    }
+
     public boolean isMatch (String title){
         return this.title.equalsIgnoreCase(title);
     }
