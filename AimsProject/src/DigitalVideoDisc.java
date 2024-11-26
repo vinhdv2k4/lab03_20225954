@@ -20,6 +20,9 @@
         public float getCost() {
         return cost;
         }
+        public void setTitle(String title) {
+            this.title = title;
+        }
     
         public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
