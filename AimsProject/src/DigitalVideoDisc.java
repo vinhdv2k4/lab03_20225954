@@ -28,6 +28,7 @@
         public int getID(){
             return id;
         }
+
     
         public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
@@ -61,14 +62,25 @@
             this.cost = cost;
             this.id = ++nbDigitalVideoDiscs;
         }
-        
+
     @Override
     public String toString() {
         return "DVD - " + title + " - "+ category + " - " + director + " - " + length + " - " + cost+ "$" ;
     }
+
     public boolean isMatch(String title) {
         return this.title != null && this.title.toLowerCase().contains(title.toLowerCase());
     }
+
+
+    public boolean isMatch(String title) {
+        return this.title != null && this.title.toLowerCase().contains(title.toLowerCase());
+    }
+
+    public boolean isMatch (String title){
+        return this.title.equalsIgnoreCase(title);
+    }
+
 }
 
     
